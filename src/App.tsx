@@ -1,8 +1,12 @@
-
+import Formulario from "./components/Formulario";
+import Header from "./components/Header/header";
 
 function App() {
   return (
-   <div></div>
+    <>
+      <Header />
+      <Formulario />
+    </>
   )
 }
 
