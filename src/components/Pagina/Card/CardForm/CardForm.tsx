@@ -1,6 +1,6 @@
 import { useRef, useState } from "react"
 import { useMensagemDeErro } from "../../../../state/hook/useMensagemDeErro"
-import useAdicionarparticipante from "../../../../state/hook/useAdicionarParticipante"
+import { useAdicionarParticipante } from "../../../../state/hook/useAdicionarParticipante"
 import style from './CardForm.module.scss'
 
 const CardForm = () => {
@@ -9,7 +9,7 @@ const [nome, setNome] = useState('')
 
 const inputRef = useRef<HTMLInputElement>(null)
 
-const adicionarNaLista = useAdicionarparticipante()
+const adicionarNaLista = useAdicionarParticipante()
 
 const mensagemDeErro = useMensagemDeErro()
 

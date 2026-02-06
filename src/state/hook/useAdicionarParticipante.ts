@@ -1,12 +1,20 @@
-import React from 'react'
-import { useSetRecoilState } from 'recoil'
-import { listaParticipantesState } from '../atom'
+import { useRecoilValue, useSetRecoilState } from "recoil"
+import { errorState, listaParticipantesState } from "../atom"
 
-const useAdicionarparticipante = () => {
+export const useAdicionarParticipante = () => {
+    
     const setLista = useSetRecoilState(listaParticipantesState)
-    return(nomeParticipante: string) => {
-        return setLista(listaAtual => [...listaAtual, nomeParticipante])
+    const lista = useRecoilValue(listaParticipantesState)
+    const setErro = useSetRecoilState(errorState)
+
+    return (nomeDoParticipante: string) => {
+        if (lista.includes(nomeDoParticipante)) {
+            setErro('Nomes duplicados não são permitidos!')
+            setTimeout(() => {
+                setErro("")
+            }, 5000)
+            return
+        }
+        return setLista(listaAtual => [...listaAtual, nomeDoParticipante])
     }
 }
-
-export default useAdicionarparticipante
