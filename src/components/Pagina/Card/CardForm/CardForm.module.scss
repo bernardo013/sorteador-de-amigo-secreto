@@ -1,0 +1,72 @@
+.container { 
+    display: flex;
+    justify-content: center;
+    
+
+    width: 100%;
+    height: 638px;
+    top: 342px;
+    border: 1px;
+    border-radius: 48px 48px;
+    background-color: #FFF9EB;
+    position: absolute;
+}
+
+.h1 {
+    color: #4B69FDFC;
+    margin-top: 30px;
+
+    font-family:'poppins';
+    font-weight: 600;
+    font-style: SemiBold;
+    font-size: 20px;
+    leading-trim: NONE;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-align: center;
+    vertical-align: middle;
+
+}
+.grupoInput {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    
+}
+
+.inputText {
+    width: 328px;
+    height: 48px;
+    top: 459px;
+    left: 16px;
+    border-radius: 37.5px;
+    border-width: 1px;
+    box-shadow: 2px 2px 0px 0px rgba(0, 0, 0, 1);
+    opacity: 2;
+    margin-top: 20px;
+
+    text-align: center;
+    font-family: Poppins;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 14px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    vertical-align: middle;
+
+
+}
+
+
+.btnInput {
+    
+    height: 48px;
+    border-radius: 37.5px;
+    border-width: 1px;
+    opacity: 1;
+    border: 1px solid rgba(0, 0, 0, 1)
+
+
+    
+}
