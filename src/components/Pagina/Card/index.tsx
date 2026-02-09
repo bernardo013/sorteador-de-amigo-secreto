@@ -1,5 +1,5 @@
 import CardForm from "./CardForm/CardForm";
-import CardList from "./CardList";
+import CardList from "./CardList/CardList";
 import CardFooter from "./CardFooter";
 
 const Card = () => {
