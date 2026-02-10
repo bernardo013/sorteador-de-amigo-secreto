@@ -1,9 +1,13 @@
-import { useRef, useState } from "react"
+import { ReactNode, useRef, useState } from "react"
 import { useMensagemDeErro } from "../../../../state/hook/useMensagemDeErro"
 import { useAdicionarParticipante } from "../../../../state/hook/useAdicionarParticipante"
 import style from './CardForm.module.scss'
 
-const CardForm = () => {
+interface CardFormProps {
+    children?: ReactNode
+}
+
+const CardForm = ( { children }: CardFormProps ) => {
 
 const [nome, setNome] = useState('')
 
@@ -39,6 +43,7 @@ return (
                 </div>
                 {mensagemDeErro && <p className="alerta erro" role="alert">{mensagemDeErro}</p>}
             </form>
+            {children}
         </div>
     </>
 )
