@@ -1,0 +1,26 @@
+.listContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    max-width: 208px;   /* largura baseada no Figma */
+    min-height: 116px;  /* altura mínima baseada no Figma */
+
+    margin: 24px auto;  /* centraliza dentro do card */
+    padding: 12px;
+
+    list-style: none;
+    
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400px;
+    font-size: 16px;
+}
+
+@media (min-width: 1024px) {
+    .listaContainer {
+        max-width: 420px;
+        padding: 20px;
+    }
+}

@@ -2,8 +2,8 @@ import { render, screen } from "@testing-library/react";
 import React from "react";
 import { RecoilRoot } from "recoil";
 import CardList from "./CardList";
-import { useCardList } from "../../../../state/hook/useCardList";
-import { listaParticipantesState } from "../../../../state/atom";
+import { useCardList } from "../../../state/hook/useCardList";
+import { listaParticipantesState } from "../../../state/atom";
 
 describe('lista vazia de participantes', () => {
 

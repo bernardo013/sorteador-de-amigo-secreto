@@ -2,7 +2,7 @@ import React from "react";
 import { RecoilRoot } from "recoil";
 import CardFooter from "./CardFooter";
 import { fireEvent, render, screen } from "@testing-library/react";
-import { listaParticipantesState } from "../../../../state/atom";
+import { listaParticipantesState } from "../../../state/atom";
 import { useNavigate } from "react-router-dom";
 
 

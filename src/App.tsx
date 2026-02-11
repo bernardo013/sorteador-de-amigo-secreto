@@ -1,6 +1,6 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { RecoilRoot } from "recoil";
-import PaginaPrincipal from "./components/Pagina/PaginaPrincipal";
+import PaginaPrincipal from "./components/pages/PaginaPrincipal";
 
 function App() {
   return (

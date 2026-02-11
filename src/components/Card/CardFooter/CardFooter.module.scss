@@ -1,0 +1,40 @@
+.footerPrincipal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    gap: 50px;
+
+    img {
+       max-width: 127px;
+       min-height: 98px;
+       top: 802px;
+       left: 116px;
+      }
+}
+
+
+.footerBtn {
+    max-width: 156px;
+    min-height: 64px;
+    padding: 12px 20px;
+
+    background-color: #FE652BFC;
+    color: #FFFF;
+
+    border-radius: 37.5px;
+    border: 2px solid #000000;
+    box-shadow: 2px 2px 0px 0px #000000;
+
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    vertical-align: middle;
+    font-size: 16px;
+    
+    text-align: center;
+    cursor: pointer;
+    
+}
+
+  
