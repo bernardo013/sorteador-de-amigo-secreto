@@ -28,28 +28,32 @@ const CardForm = () => {
                 <div className={style.grupoInput}>
                     <h1 className={style.h1}>Vamos Começar!</h1>
 
-                    <div className={style.inputWrapper}>
-                        <img src={personAdd} alt="" className={style.inputIcon} />
+                    {/* NOVO CONTAINER */}
+                    <div className={style.linhaInputBotao}>
+                        <div className={style.inputWrapper}>
+                            <img src={personAdd} alt="" className={style.inputIcon} />
 
-                        <input
-                            ref={inputRef}
-                            value={nome}
-                            onChange={evento => setNome(evento.target.value)}
-                            type="text"
-                            placeholder="Insira os nomes dos participantes"
-                            className={style.inputText}
-                        />
+                            <input
+                                ref={inputRef}
+                                value={nome}
+                                onChange={evento => setNome(evento.target.value)}
+                                type="text"
+                                placeholder="Insira os nomes dos participantes"
+                                className={style.inputText}
+                            />
+                        </div>
+
+                        <button className={style.btnInput} disabled={!nome}>
+                            Adicionar
+                        </button>
                     </div>
-
-                    <button className={style.btnInput} disabled={!nome}>
-                        Adicionar
-                    </button>
                 </div>
 
                 {mensagemDeErro && (
                     <p className={style.alerta} role="alert">{mensagemDeErro}</p>
                 )}
             </form>
+
 
         </>
     )

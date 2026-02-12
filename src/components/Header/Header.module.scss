@@ -29,15 +29,19 @@
 @media (min-width: 1024px) {
   .Header {
       min-height: 520px;
-      padding-bottom: 180px;
+      padding: 90px 16px 130px;
   }
 
   .img1 {
-      max-width: 260px;
+      max-width: 440px;
       margin-bottom: 32px;
+      margin-right: 260px;
   }
 
   .img2 {
-      max-width: 340px;
+      margin-left: 600px;
+      display: block;
+      max-width: 440px;
+
   }
 }

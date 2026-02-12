@@ -1,6 +1,7 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { RecoilRoot } from "recoil";
-import PaginaPrincipal from "./components/pages/PaginaPrincipal";
+import PaginaPrincipal from "./components/pages/PaginaPrincipal/PaginaPrincipal";
+import Sorteio from "./components/pages/Sorteio/Sorteio";
 
 function App() {
   return (
@@ -8,6 +9,7 @@ function App() {
       <RecoilRoot>
         <Routes>
           <Route path="/" element={<PaginaPrincipal />} />
+          <Route path="/sorteio" element={<Sorteio />} />
         </Routes>
       </RecoilRoot>
     </BrowserRouter>

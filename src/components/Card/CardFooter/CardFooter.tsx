@@ -1,7 +1,10 @@
 import { useNavigate } from "react-router-dom";
 import style from './CardFooter.module.scss'
 import { useListaParticipantes } from '../../../state/hook/useListaParticipantes';
-import sacolas from '../../../assets/img/sacolas.png'
+import sacolas from '../../../assets/img/sacolas.png'   
+import { ReactNode } from "react";
+
+
 
 const CardFooter = () => {
   const participantes = useListaParticipantes()

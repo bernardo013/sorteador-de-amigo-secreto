@@ -37,4 +37,44 @@
     
 }
 
+@media (min-width: 768px) {
+    .footerPrincipal {
+        flex-direction: row;
+        justify-content: center; /* mantém o conjunto centralizado */
+        align-items: center;
+        gap: 80px; /* espaço entre botão e imagem */
+    }
+
+    .footerPrincipal img {
+        max-width: 180px; /* imagem cresce no desktop */
+    }
+
+    .footerBtn {
+        max-width: 200px;
+        min-height: 72px;
+        font-size: 18px;
+        padding: 16px 28px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .footerPrincipal {
+        gap: 140px;              /* mais respiro lateral */
+        padding: 60px 40px;      /* mais espaço vertical */
+    }
+
+    .footerPrincipal img {
+        max-width: 220px;        /* sacolas maiores */
+    }
+
+    .footerBtn {
+        max-width: 240px;
+        min-height: 80px;
+        font-size: 20px;
+        padding: 18px 36px;
+        border-radius: 45px;     /* acompanha o crescimento */
+    }
+}
+
+
   
