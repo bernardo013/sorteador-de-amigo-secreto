@@ -1,16 +1,15 @@
-import { realizarSorteio } from "./realizarSorteio"
+import { realizarSorteio }  from "./realizarSorteio"
 
-
-describe('dado sorteio de amigo secreto', () => {
-    test('cada participante não sorteio o proprío nome!', () => {
+ describe('dado sorteio de amigo secreto', () => {
+    test('cada participante não sorteio o proprío nome!', () => { 
 
         const participantes = [
-            'Ana', 
-            'Bernardo',
-            'Julio',
-            'João',
-            'Vinícius',
-            'Nathalia'
+            'Ana',  // 0 index
+            'Bernardo', // 1 index
+            'Julio', // 2  index
+            'João', // 3 index
+            'Vinícius', // 4 index
+            'Nathalia' // 5 index 
         ]
         
         const sorteio = realizarSorteio(participantes)
