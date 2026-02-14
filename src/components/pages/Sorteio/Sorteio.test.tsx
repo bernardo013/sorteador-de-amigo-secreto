@@ -2,7 +2,7 @@ import React from "react";
 import { RecoilRoot } from "recoil";
 import Sorteio from './Sorteio'
 import { fireEvent, render, screen } from "@testing-library/react";
-import { listaParticipantesState } from "../../../state/atom";
+import { listaParticipantesState, resultadoAmigoSecreto } from "../../../state/atom";
 import useResultadoSorteio from "../../../state/hook/useResultadoSorteio";
 
 
@@ -10,11 +10,6 @@ import useResultadoSorteio from "../../../state/hook/useResultadoSorteio";
 describe('na pagina de sorteio', () => {
     test('todos os participantes podem exibir o seu amigo secreto', () => {
         const participantes = ['bernardo', 'pedro', 'julia']
-        const resultado = new Map([
-            ['bernardo', 'pedro']
-            ['julia', 'bernardo']
-            ['pedro', 'julia']
-        ])
         
         render(
             <RecoilRoot  initializeState={({ set }) => {
@@ -28,18 +23,26 @@ describe('na pagina de sorteio', () => {
 
 })
     test('o amigo secreto é exibido quando solicitado', () => {
-        render(
-            <RecoilRoot initializeState={ ({ set }) => {
-                set(useResultadoSorteio, resultado)
-            }}>
+        const participantes = ['bernardo', 'pedro', 'julia']
+        const resultado = new Map([
+            ['bernardo', 'pedro'],
+            ['pedro', 'julia'],
+            ['julia', 'bernardo']
+        ])
+
+
+         render(
+            <RecoilRoot initializeState={ ({set}) => {
+                set(resultadoAmigoSecreto, resultado)
+                set(listaParticipantesState, participantes)
+            } }>
                 <Sorteio/>
             </RecoilRoot>
-
         )
-            const select = screen.getByPlaceholderText('selecione o seu nome').ATTRIBUTE_NODE
+            const select = screen.getByPlaceholderText('selecione o seu nome')
             fireEvent.change(select, {
                 target: {
-                    value: participantes
+                    value: participantes[0]
                 }
             })
             const botao = screen.getByRole('button')

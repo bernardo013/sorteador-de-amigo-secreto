@@ -11,7 +11,7 @@ const mockNavegacao = jest.fn()
 const mockSorteio = jest.fn()
 
 
-jest.mock('../state/hook/useSorteador', () => {
+jest.mock('../../../state/hook/useSorteador', () => {
     return {
         useSorteador: () => mockSorteio
     }

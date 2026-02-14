@@ -25,6 +25,7 @@ const Sorteio = () => {
   <form onSubmit={sortear}>
     <section className={style.card}>
       <select
+       className={style.select}
        required
        name='ParticipanteDaVez'
        id='ParticipanteDaVez'
@@ -34,15 +35,17 @@ const Sorteio = () => {
 
       >
           {participantes.map(participante => (
-            <option key={participante}>
+            <option  
+            className={style.option}
+             key={participante}>
               {participante}
             </option>
           ))}
     </select>
-      <button>Sortear</button>
+      <button className={style.button}>Sortear</button>
   </section>
 </form>
-      {amigoSecreto && <p role='alert'>{amigoSecreto}</p>}
+      {amigoSecreto && <p  className={style.resultado} role='alert'>{amigoSecreto}</p>}
   </>
   )
 }
