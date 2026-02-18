@@ -1,4 +1,4 @@
-.card {
+.card {   
     width: 100%;
     max-width: 360px; /* largura base do layout mobile */
     min-height: 638px; /* altura mínima baseada no Figma */
@@ -15,6 +15,95 @@
     position: relative;
     z-index: 1;
 }
+
+.container { 
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.titulo {
+    font-family: Poppins;
+    font-weight: 600;
+    font-style: SemiBold;
+    font-size: 20px;
+    color: rgba(75, 105, 253, 0.99);
+    appearance: none;
+}
+
+
+
+.seletor {
+    width: 320px;
+    height: 48px;
+    border-radius: 32px;
+    border: 1px solid rgba(0,0,0,1);
+    box-shadow: 2px 2px 0px 0px #000;
+
+}
+
+
+.pTag {
+    width: 328px;
+    height: 54px;    
+
+    text-align: center;
+
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 100%;
+
+}
+
+.resultado {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400px;
+    font-style: regular;
+    font-size: 18px;
+    line-height: 100%;
+    color: rgba(254, 101, 43, 0.99);
+}
+
+
+.btnSortear {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+
+    width: 150px;
+    min-height: 59.53px;
+  
+    padding: 12px 24px;
+    background-color: #ff6a2c;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+  
+    border: 2px solid black;
+    box-shadow: 2px 2px 0px 0px #000;
+    border-radius: 40px;
+  
+    cursor: pointer;
+    transition: 0.2s ease;
+  }
+  
+  .btnSortear:hover {
+    transform: scale(1.05);
+  }
+  
+  .btnSortear:active {
+    transform: scale(0.98);
+  }
+  
+  .btn-icon {
+    width: 20px;
+    height: 20px;
+  }
+  
+
 
 @media(min-width: 360px) and (max-width: 767px) {
     .card {
